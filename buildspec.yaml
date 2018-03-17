@@ -9,3 +9,6 @@ phases:
     commands:
       npm build
 
+  files:
+    build/*
+  discard-paths: no
