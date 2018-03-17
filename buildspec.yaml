@@ -9,7 +9,7 @@ phases:
     commands:
       npm build
 
- artifacts:
+artifacts:
    files:
      build/*
    discard-paths: no
