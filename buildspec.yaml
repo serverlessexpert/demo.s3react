@@ -3,13 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      npm install
+      - npm install
 
   build:
     commands:
-      npm run-script build
+      - npm run-script build
 
-artifacts:
-   files:
-     build/*
-   discard-paths: no
+  post_build:
+    commands:
+      - aws s3 sync build/ s3://demo.serverlessexpert.com/s3react/
